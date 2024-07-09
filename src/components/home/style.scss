@@ -50,6 +50,21 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .home {
+    &__text {
+      &-hello {
+        margin-bottom: 18px;
+      }
+    }
+    &__thumbnail {
+      width: 38%;
+      margin-left: 15px;
+    }
+  }
+}
+
 @media (max-width: 575px) {
   .home {
     &__content {
@@ -63,23 +78,9 @@
       }
     }
     &__thumbnail {
-      width: 50%;
+      width: 60%;
       margin-left: 0px;
       margin-top: 15px;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  .home {
-    &__text {
-      &-hello {
-        margin-bottom: 18px;
-      }
-    }
-    &__thumbnail {
-      width: 38%;
-      margin-left: 15px;
     }
   }
 }
