@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../scss/variable.scss';
+.bg-black {
+    background-color: $black;
+}
+.container {
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+      max-width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+      max-width: 720px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+      max-width: 540px;
+  }
+}
