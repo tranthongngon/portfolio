@@ -1,9 +1,10 @@
-import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./styles.scss";
 import "./assets/scss/common.scss";
 import Header from "./layout/header/Header";
 import Home from "./components/home/Home";
+import { dataProject } from "./components/data";
+import Project from "./components/projects/Project";
 
 const App = () => {
   return (
@@ -21,18 +22,21 @@ const App = () => {
         render={() => (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <Home/>
+              <Home />
             </div>
-            <div className="section">
-              <div className="slide">
-                <h1>Project 1</h1>
-              </div>
-              <div className="slide">
-                <h1>Project 2</h1>
-              </div>
-              <div className="slide">
-                <h1>Project 3</h1>
-              </div>
+            <div className="section section-project">
+              {dataProject.map((data) => (
+                <div className="slide" style={{backgroundColor: data.color}}>
+                  <Project
+                    name={data.name}
+                    img={data.thumbnail}
+                    respon={data.resppon}
+                    techs={data.techs}
+                    link={data.link}
+                    color={data.color}
+                  />
+                </div>
+              ))}
             </div>
             <div className="section">
               <h1>About </h1>

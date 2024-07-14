@@ -1,0 +1,234 @@
+@import "../../assets/scss/variable.scss";
+.project {
+  &__wrap {
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h4 {
+      color: #fff;
+      font-family: "Eczar", serif;
+      font-size: 38px;
+      line-height: 1;
+      margin: 0;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      text-align: center;
+      letter-spacing: 3px;
+    }
+  }
+  &__text {
+    flex: 1;
+    height: 75%;
+    background-size: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &-wrap {
+      position: relative;
+      z-index: 5;
+      max-width: 550px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 15px;
+      font-family: "Work Sans", sans-serif;
+      color: #fff;
+    }
+    &-res {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+    &-tech {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      row-gap: 8px;
+      justify-content: center;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    &-item {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px 8px;
+      line-height: 1;
+      background-color: #ff5e14;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &:hover {
+      background-size: 130%;
+      background-position: left center;
+    }
+    &-btn {
+      width: fit-content;font-family: "Work Sans", sans-serif;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 8px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .project {
+    &__wrap {
+      width: 100%;
+      height: 100%;
+    }
+    &__text {
+      transition: background 0.5s linear;
+      &-wrap {
+        right: -100%;
+        transition: right 0.5s linear;
+      }
+      &::before {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        opacity: 0;
+        transition: opacity 0.5s linear;
+      }
+      &:hover {
+        background-size: 130%;
+        background-position: left center;
+        &::before {
+          opacity: 1;
+        }
+        .project__text-wrap {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .project {
+    &__title {
+      h4 {
+        font-size: 28px;
+        width: 50px;
+      }
+    }
+    &__text {
+      height: 51%;
+      &-wrap {
+        max-width: 450px;
+      }
+      &-res {
+        font-size: 18px;
+      }
+      &-tech {
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .project {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &__title {
+      width: 100%;
+      justify-content: center;
+      h4 {
+        width: 100%;
+        font-size: 26px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+      }
+    }
+    &__text {
+      flex: none;
+      height: 280px;
+      width: 100%;
+      background-size: cover;
+      &-wrap {
+        max-width: 400px;
+      }
+      &-res {
+        font-size: 18px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+      &-tech {
+        column-gap: 5px;
+        row-gap: 5px;
+        max-width: 100%;
+      }
+      &-item {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .project {
+    &__content {
+      row-gap: 10px;
+    }
+    &__title {
+      h4 {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+    }
+    &__text {
+      height: 250px;
+      &-wrap {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      &-res {
+        font-size: 16px;
+        -webkit-line-clamp: 2;
+      }
+      &-tech {
+        column-gap: 5px;
+        row-gap: 5px;
+        max-width: 100%;
+      }
+      &-item {
+        font-size: 11px;
+      }
+      &-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
