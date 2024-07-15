@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.scss";
 import logo from "../../assets/images/logo.png";
-export default function Header() {
+export default function Header(props: {
+  hagTag: string
+}) {
   return (
     <header className="header">
       <div className="container">
@@ -14,28 +16,28 @@ export default function Header() {
           <div className="header__nav">
             <ul className="header__nav-menu" id="menu">
               <li className="header__nav-item">
-                <a href="#home" className="roboto-bold" data-menuanchor="hone">
+                <a href="#home" className={props.hagTag === '#home' ? 'active' : ''} data-menuanchor="hone">
                   Home
                 </a>
               </li>
               <li className="header__nav-item">
                 <a
                   href="#project"
-                  className="roboto-bold"
+                  className={props.hagTag === '#project' ? 'active' : ''}
                   data-menuanchor="hone"
                 >
                   Projects
                 </a>
               </li>
               <li className="header__nav-item">
-                <a href="#about" className="roboto-bold" data-menuanchor="hone">
+                <a href="#about" className={props.hagTag === '#about' ? 'active' : ''} data-menuanchor="hone">
                   About
                 </a>
               </li>
               <li className="header__nav-item">
                 <a
                   href="#contact"
-                  className="roboto-bold"
+                  className={props.hagTag === '#contact' ? 'active' : ''}
                   data-menuanchor="hone"
                 >
                   Contact

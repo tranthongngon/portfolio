@@ -4,6 +4,7 @@ export interface IProject {
   name: string;
   thumbnail: string;
   color: string;
+  color_2: string;
   techs: string[];
   resppon: string;
   link: string;
@@ -14,6 +15,7 @@ export const dataProject: IProject[] = [
     name: "Editor-X blog template",
     thumbnail: loadImage("editor.png"),
     color: "#265073",
+    color_2: "#405D72",
     techs: ["HTML", "CSS", "Javascript", "Jquery", "OwlCarousel"],
     resppon: "Successfully build a responsive website template.",
     link: "https://editor-x-blog.netlify.app",
@@ -22,6 +24,7 @@ export const dataProject: IProject[] = [
     name: "My Personal Diary Keeper",
     thumbnail: loadImage("diary.png"),
     color: "#561C24",
+    color_2: "#A91D3A",
     techs: [
       "React",
       "Material UI",
@@ -41,6 +44,7 @@ export const dataProject: IProject[] = [
     name: "Website construction",
     thumbnail: loadImage("construct.png"),
     color: "#141E46",
+    color_2: "#10439F",
     techs: [
       "React",
       " Material UI",
@@ -59,6 +63,7 @@ export const dataProject: IProject[] = [
     name: "Forter blog magazine",
     thumbnail: loadImage("forter.png"),
     color: "#12372A",
+    color_2: "#003C43",
     techs: ["HTML", "CSS", "Javascript", "Jquery", "OwlCarousel", "PHP"],
     resppon: "Convert interface from design file to website interface. Synthesize the code, edit the interface of each member.Coordinate with the Backend to complete the website.",
     link: "https://themeproducers.com/forter/default",
@@ -67,6 +72,7 @@ export const dataProject: IProject[] = [
     name: "Web app data Visualize",
     thumbnail: loadImage("visualize.png"),
     color: "#352F44",
+    color_2: "#5F374B",
     techs: [
         "Angular",
         "Typescript",
@@ -88,6 +94,7 @@ export const dataProject: IProject[] = [
     name: "Web app data Analytic",
     thumbnail: loadImage("analytic.png"),
     color: "#092635",
+    color_2: "#1B3C73",
     techs: [
         "Angular",
         "Typescript",
