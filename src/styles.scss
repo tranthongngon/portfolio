@@ -42,7 +42,7 @@ h1 {
 }
 
 .fp-section:nth-child(4) {
-  background-image: linear-gradient(128deg, #40fff2, #3fbcff);
+  background-image: linear-gradient(128deg, #13445A, #305C5C);
 }
 .fp-section:nth-child(5) {
   background-image: linear-gradient(128deg, #cb980b, #3fbcff);
@@ -60,4 +60,7 @@ h1 {
       height: 100%;
     }
   }
+}
+.fp-warning, .fp-watermark {
+  display: none !important;
 }

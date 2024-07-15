@@ -7,6 +7,7 @@ import { dataProject } from "./components/data";
 import Project from "./components/projects/Project";
 import { useEffect, useState } from "react";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   const [hagTag, setHagTag] = useState("#home");
@@ -61,7 +62,7 @@ const App = () => {
                 <About/>
               </div>
               <div className="section">
-                <h1>Contact</h1>
+                <Contact/>
               </div>
             </ReactFullpage.Wrapper>
           );

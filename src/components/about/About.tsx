@@ -17,7 +17,7 @@ export default function About() {
                 {" "}
                 Javascript, ReactJS, Typescript, HTML, CSS
               </strong>{" "}
-              has skills in analyzing requirements, proposing technical
+              has skills in responsive web design, analyzing requirements, proposing technical
               solutions and communicating with other members of the team.
             </p>
             <p>
